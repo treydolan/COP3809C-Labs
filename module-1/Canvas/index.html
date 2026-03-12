@@ -6,12 +6,42 @@
     <title>Canvas Element</title>
 </head>
 <body>
-    <canvas id="myCanvas" width="200" height="100" style="border: 1px solid black;"></canvas>
+    <canvas id="myCanvas1" width="200" height="100" style="border: 1px solid black;"></canvas>
+    <canvas id="myCanvas2" width="200" height="100" style="border: 1px solid black;"></canvas>
+    <canvas id="myCanvas3" width="200" height="100" style="border: 1px solid black;"></canvas>
     <script>
-        const canvas = document.getElementById("myCanvas");
-        const ctx = canvas.getContext("2d");
-        ctx.fillStyle = "red";
-        ctx.fillRect(0, 0, 150, 75);
+        const canvas1 = document.getElementById("myCanvas1");
+        const ctx1 = canvas1.getContext("2d");
+        ctx1.fillStyle = "red";
+        ctx1.fillRect(0, 0, 150, 75);
+
+        const canvas2 = document.getElementById("myCanvas2");
+        const ctx2 = canvas2.getContext("2d");
+        ctx2.fillStyle = '#ccddff';
+        ctx2.beginPath();
+        ctx2.moveTo(50,20);
+        ctx2.lineTo(200,50);
+        ctx2.lineTo(150,80);
+        ctx2.closePath();
+        ctx2.fill();
+        ctx2.strokeStyle = 'rgb(0,128,0)';
+        ctx2.lineWidth = 5;
+        ctx2.stroke();
+
+
+        const canvas3 = document.getElementById("myCanvas3");
+        const ctx3 = canvas3.getContext("2d");
+        ctx3.fillStyle = 'red';
+        ctx3.beginPath();
+        ctx3.moveTo(10,30);
+        ctx3.bezierCurveTo(50,90,159,-30,200,30);
+        ctx3.lineTo(200,90);
+        ctx3.lineTo(10,90);
+        ctx3.closePath();
+        ctx3.fill();
+        ctx3.lineWidth = 4;
+        ctx3.strokeStyle = 'black';
+        ctx3.stroke();
     </script>
 </body>
 </html>

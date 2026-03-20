@@ -2,12 +2,12 @@
 
 <roster>
 
-    <person fullname="Albert Luna" salary="846.15" commission="86.32"/>
-    <person fullname="Trish Marchan" salary="865.38" commission="90.45"/>
-    <person fullname="Doreatha Blair" salary="865.38" commission="8.86"/>
-    <person fullname="Rosario Sprung" salary="865.38" commission="153.31"/>
-    <person fullname="Christopher Hernandez" salary="846.15" commission="33.05"/>
-    <person fullname="Isaac Grosso" salary="807.69" commission="0.00"/>
-    <person fullname="Annabell Watkins" salary="846.15" commission="26.98"/>
+    <person fullName="Albert Luna" salary="846.15" commission="86.32"/>
+    <person fullName="Trish Marchan" salary="865.38" commission="90.45"/>
+    <person fullName="Doreatha Blair" salary="865.38" commission="8.86"/>
+    <person fullName="Rosario Sprung" salary="865.38" commission="153.31"/>
+    <person fullName="Christopher Hernandez" salary="846.15" commission="33.05"/>
+    <person fullName="Isaac Grosso" salary="807.69" commission="0.00"/>
+    <person fullName="Annabell Watkins" salary="846.15" commission="26.98"/>
 
 </roster>

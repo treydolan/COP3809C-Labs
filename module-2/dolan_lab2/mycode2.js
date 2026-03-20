@@ -8,7 +8,7 @@ $(document).ready(function(){
 
     // Face outline
     ctx.beginPath();
-    ctx.arc(centerX, centerY, 140, 0, Math.PI * 2);
+    ctx.arc(centerX, centerY, 170, 0, Math.PI * 2); // 60px less than height === 340 -> diameter, 170 -> radius
     ctx.stroke();
 
     // Left eye
@@ -29,6 +29,6 @@ $(document).ready(function(){
     // Text
     ctx.font = "30px Arial";
     ctx.textAlign = "center";
-    ctx.fillText("Happy", centerX, centerY + 180);
+    ctx.fillText("Happy", centerX, centerY + 190);
 
 });

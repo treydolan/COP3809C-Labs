@@ -13,6 +13,11 @@ $(document).ready(function () {
 		myCanvas.attr('height', $(container).width() / 2.4);
 	}
 
+	// Requirement #2 
+	var canvasEl = myCanvas.get(0);
+	myPaper.fillStyle = "black";
+	myPaper.fillRect(0, 0, canvasEl.width, canvasEl.height);
+
 	getMyData();
 
 	function getMyData() {
@@ -47,10 +52,10 @@ $(document).ready(function () {
 		$('#showMin').text("Min: "+theMin);
 		$('#showAvg').text("Average: "+theAvg);
 
-				myPaper.strokeStyle="#F00";
-				myPaper.lineWidth="1";
+		myPaper.strokeStyle="#F00";
+		myPaper.lineWidth="1";
 		myPaper.beginPath();
-myPaper.moveTo(-2,canvasHeight);
+		myPaper.moveTo(-2,canvasHeight);
 		
 		
 		setInterval(function () {
@@ -59,32 +64,30 @@ myPaper.moveTo(-2,canvasHeight);
 
 		var i = 0;
 		
-		
-		
-		
-		
 		function drawOneNode() {
 
-			
-			
 			if (i < children.length) {
 				//myPaper.clearRect(0, 0, myCanvas.width, myCanvas.height); //clear the canvas
 				nextX =( i * widthPerNode)-2;
 				nextY = canvasHeight - children[i].getAttribute('price') * (canvasHeight / theMax)*0.9;//scale
 
-					
 				myPaper.lineTo(nextX,nextY);
-				
-		myPaper.stroke();
-				
+				myPaper.stroke();
 
-			//	myPaper.fillRect(nextX, nextY, widthPerNode - 4, canvasHeight - nextY);
+				// Requirement #1
+				myPaper.beginPath();
+				myPaper.arc(nextX, nextY, 10, 0, Math.PI * 2);
+				myPaper.fillStyle = "red";
+				myPaper.fill();
 				
-				myPaper.fillStyle = "rgba(0, 0, 0, 0.6)";
+				// Requirement # 4
+				myPaper.fillStyle = "white";
 				myPaper.font = "1.2vw Arial";
 				
-		myPaper.fillText(children[i].getAttribute('price'), nextX+5,nextY+20 );
-	myPaper.fillText(children[i].getAttribute('timepoint'), nextX+5 ,  canvasHeight-10);
+				myPaper.fillText(children[i].getAttribute('price'), nextX+5,nextY+20 );
+
+				// Requirement # 3
+				// myPaper.fillText(children[i].getAttribute('timepoint'), nextX+5 ,  canvasHeight-10);
 
 				
 			
@@ -92,14 +95,10 @@ myPaper.moveTo(-2,canvasHeight);
 				i++;
 			} //end of if not last node
 			
-		
 		} //end of the func timer
-		
-
-		
+			
 	} //end getMy data
 
-	
 	var doit;
 	$(window).resize(function () {
 		clearTimeout(doit); //clear prev values

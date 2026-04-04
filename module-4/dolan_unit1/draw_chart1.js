@@ -8,18 +8,18 @@ $(document).ready(function () {
 	var theMin = 0;
 	var theAvg = 0;
 
-	if ($(container).width() < 960) { //if small screen	
+	if ($(container).width() < 1000) { //if small screen	
 		myCanvas.attr('width', $(container).width()); //set a new width
-		myCanvas.attr('height', $(container).width() / 2.4);
+		myCanvas.attr('height', $(container).width() / 1.667);
 	}
 
 	getMyData();
 
 	function getMyData() {
 
-		var children = document.getElementsByTagName('node');
+		var children = document.getElementsByTagName('endOfYear');
 		//alert(children.length);
-		//alert(children[0].getAttribute('price'));
+		//alert(children[0].getAttribute('closing'));
 		var nextX = 0;
 		var nextY = 0;
 		var canvasWidth = $("#myCanvas").width();
@@ -31,7 +31,7 @@ $(document).ready(function () {
 		var z = 0;
 
 		for (z; z < children.length; z++) {
-			var getPrice = parseFloat(children[z].getAttribute('price'));
+			var getPrice = parseFloat(children[z].getAttribute('closing'));
 			priceArray.push(getPrice);
 			priceArraySum += getPrice;
 
@@ -42,15 +42,21 @@ $(document).ready(function () {
 		//alert(theMax);
 		theMin = Math.min.apply(Math, priceArray);
 		//alert(theMin);
-		theAvg = (priceArraySum / children.length).toFixed(2);
-		$('#showMax').text("Max: "+theMax);
-		$('#showMin').text("Min: "+theMin);
-		$('#showAvg').text("Average: "+theAvg);
+
+		// Locate index position of min/max for display
+		var maxIndex = priceArray.indexOf(theMax);
+		var minIndex = priceArray.indexOf(theMin);
+		var maxYear = children[maxIndex].getAttribute('year');
+		var minYear = children[minIndex].getAttribute('year');
+
+
+		$('#showMax').text("Best Year: "+ maxYear + " - Closing: " + theMax);
+		$('#showMin').text("Worst Year: "+ minYear + " - Closing: " + theMin);
 
 
 		setInterval(function () {
 			drawOneNode()
-		}, 200);
+		}, 400);
 
 		var i = 0;
 
@@ -60,24 +66,24 @@ $(document).ready(function () {
 				//myPaper.clearRect(0, 0, myCanvas.width, myCanvas.height); //clear the canvas
 				$("#Outer").fadeToggle(1000);
 				nextX = i * widthPerNode;
-				nextY = canvasHeight - children[i].getAttribute('price') * (canvasHeight / theMax) + 10;
+				nextY = canvasHeight - children[i].getAttribute('closing') * (canvasHeight / theMax) + 10;
 
 				var my_gradient = myPaper.createLinearGradient(0, 0, 0, canvasHeight);
 
 
 
-				my_gradient.addColorStop(0, "rgba(0,255,0,0.4)");
-				my_gradient.addColorStop(0.5, "rgba(0,0,255,0.4)");
-				my_gradient.addColorStop(1, "rgba(255,0,0,0.4)");
+				my_gradient.addColorStop(0, "rgba(255,165,0,0.8)");
+				my_gradient.addColorStop(0.5, "rgba(0,128,0,0.4)");
+				my_gradient.addColorStop(1, "rgba(0, 102, 255, 0.4)");
 				myPaper.fillStyle = my_gradient;
 
 
 				myPaper.fillRect(nextX, nextY, widthPerNode - 4, canvasHeight - nextY);
 				myPaper.fillStyle = "rgba(255, 255, 255, 0.8)";
 				myPaper.font = "13px Arial";
-				myPaper.fillText(children[i].getAttribute('price'), nextX + 5, nextY + 15);
+				myPaper.fillText(children[i].getAttribute('closing'), nextX + 5, nextY + 15);
 				myPaper.fillStyle = "black";
-				myPaper.fillText(children[i].getAttribute('timepoint'), nextX + 10, 390);
+				myPaper.fillText(children[i].getAttribute('year'), nextX + 10, 570);
 				i++;
 			} //end of if not last node
 		} //end of the func timer
@@ -90,16 +96,15 @@ $(document).ready(function () {
 	});
 
 	function respondCanvas() {
-		if ($(container).width() < 960) { //if small screen
+		if ($(container).width() < 1000) { //if small screen
 
 			myCanvas.attr('width', $(container).width()); //set a new width
-			myCanvas.attr('height', $(container).width() / 2.4);
+			myCanvas.attr('height', $(container).width() / 1.667);
 			myPaper.clearRect(0, 0, myCanvas.width, myCanvas.height); //clear the canvas
 			getMyData(); //redraw the blocks
 		} else {
-
-			myCanvas.attr('width', 960);
-			myCanvas.attr('height', 400);
+			myCanvas.attr('width', 1000);
+			myCanvas.attr('height', 600);
 			myPaper.clearRect(0, 0, myCanvas.width, myCanvas.height);
 			getMyData();
 		} //end if-else

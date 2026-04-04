@@ -9,14 +9,14 @@
 }/*resets*/
 
 body{
-	font-family:  "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	background-color: #999;
+	font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background-color: #f5f7fa;
 }
 
 #myCanvas{
 	/*style the canvas*/
 	/*border: 1px solid #000000;*/
-	background-image:url("images/canvas_bg.jpg");
+	background-image:url("images/allison-saeng-HrFCxo0Go5Y-unsplash.jpg");
 	background-position: center center;
 	background-size: contain;
 	
@@ -24,15 +24,11 @@ body{
 }
 
 #showMax{
-	background-color:#B0FF6C;
+	background-color: #6CCBFF;
 }
 
 #showMin{
-	background-color:#FF7F81;
-}
-
-#showAvg{
-	background-color:#81E0FF;
+	background-color: #F4B400;
 }
 
 
@@ -44,9 +40,9 @@ body{
 	background-color: #FFF;
 }
 
-	#showMax,#showMin,#showAvg{
+	#showMax,#showMin{
 		display:inline-block;
-		width:31%;
+		width:48%;
 		text-align: center;
 		font-size: 18px;
 		padding:10px;
@@ -65,7 +61,7 @@ width: 99.5%;/*be as wide as the screen*/
 	padding-bottom: 1%;
 }
 
-	#showMax,#showMin,#showAvg{
+	#showMax,#showMin{
 		display:block;
 		width:98%;
 		text-align: center;

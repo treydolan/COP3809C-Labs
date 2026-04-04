@@ -16,7 +16,7 @@ body{
 #myCanvas{
 	/*style the canvas*/
 	/*border: 1px solid #000000;*/
-	background-image:url("images/allison-saeng-HrFCxo0Go5Y-unsplash.jpg");
+	background-image:url("images/matt-hanns-schroeter-58DmnXSdhg0-unsplash.jpg");
 	background-position: center center;
 	background-size: contain;
 	
@@ -24,11 +24,11 @@ body{
 }
 
 #showMax{
-	background-color: #6CCBFF;
+	background-color: rgba(255, 200, 0, 0.85);
 }
 
 #showMin{
-	background-color: #F4B400;
+	background-color: rgba(0, 180, 180, 0.75);
 }
 
 

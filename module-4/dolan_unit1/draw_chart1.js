@@ -72,18 +72,20 @@ $(document).ready(function () {
 
 
 
-				my_gradient.addColorStop(0, "rgba(255,165,0,0.8)");
-				my_gradient.addColorStop(0.5, "rgba(0,128,0,0.4)");
-				my_gradient.addColorStop(1, "rgba(0, 102, 255, 0.4)");
+				my_gradient.addColorStop(0, "rgba(255, 200, 0, 0.85)");
+				my_gradient.addColorStop(0.5, "rgba(0, 180, 180, 0.75)");
+				my_gradient.addColorStop(1, "rgba(0, 80, 200, 0.85)");
 				myPaper.fillStyle = my_gradient;
 
 
 				myPaper.fillRect(nextX, nextY, widthPerNode - 4, canvasHeight - nextY);
-				myPaper.fillStyle = "rgba(255, 255, 255, 0.8)";
-				myPaper.font = "13px Arial";
+				myPaper.shadowColor = "rgba(0, 0, 0, 0.8)";
+				myPaper.shadowBlur = 4;
+				myPaper.fillStyle = "white";
+				myPaper.font = "13px monospace";
 				myPaper.fillText(children[i].getAttribute('closing'), nextX + 5, nextY + 15);
-				myPaper.fillStyle = "black";
-				myPaper.fillText(children[i].getAttribute('year'), nextX + 10, 570);
+				myPaper.fillStyle = "rgba(255, 255, 255, 0.95)";
+				myPaper.fillText(children[i].getAttribute('year'), nextX + 5, canvasHeight - 10);
 				i++;
 			} //end of if not last node
 		} //end of the func timer

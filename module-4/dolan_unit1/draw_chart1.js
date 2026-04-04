@@ -84,6 +84,8 @@ $(document).ready(function () {
 				myPaper.fillStyle = "white";
 				myPaper.font = "13px monospace";
 				myPaper.fillText(children[i].getAttribute('closing'), nextX + 5, nextY + 15);
+				myPaper.shadowBlur = 0;
+				myPaper.shadowColor = "transparent";
 				myPaper.fillStyle = "rgba(255, 255, 255, 0.95)";
 				myPaper.fillText(children[i].getAttribute('year'), nextX + 5, canvasHeight - 10);
 				i++;

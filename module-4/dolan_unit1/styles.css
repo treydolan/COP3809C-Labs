@@ -37,12 +37,12 @@ body{
 	width: 960px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #FFF;
+	background-color: #2c9f71;
 }
 
 	#showMax,#showMin{
 		display:inline-block;
-		width:48%;
+		width:47.6%;
 		text-align: center;
 		font-size: 18px;
 		padding:10px;
@@ -57,7 +57,7 @@ body{
 /*any viewport smaller than 960*/
 #container {
 width: 99.5%;/*be as wide as the screen*/	
-	background-color: #FFF;
+	background-color: #2a3f7e;
 	padding-bottom: 1%;
 }
 

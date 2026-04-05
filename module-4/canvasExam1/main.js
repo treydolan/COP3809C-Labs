@@ -37,7 +37,7 @@ $(document).ready(function() {
         // 4. Redraw arcTo
         ctx.beginPath();
         ctx.moveTo(300, 100);
-        ctx.arcTo(150, 20, 150, 70, 50);
+        ctx.arcTo(150, 20, 150, 70, 100);
         ctx.stroke();
 
         // 5. Redraw triangle

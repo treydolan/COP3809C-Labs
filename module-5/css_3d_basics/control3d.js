@@ -14,13 +14,13 @@ $(document).ready(function () {
 	
 ////x rotate////////////////////
 	$("#minusX").click(function () {
-		rotateX -= 15;
+		rotateX -= 50;
 		myRotate();
 	});
 
 
 	$("#plusX").click(function () {
-		rotateX += 15;
+		rotateX += 50;
 		myRotate();
 	});
 
@@ -29,13 +29,13 @@ $(document).ready(function () {
 	////y rotate////////////////////
 	
 	$("#minusY").click(function () {
-		rotateY -= 15;
+		rotateY -= 50;
 		myRotate();
 	});
 
 
 	$("#plusY").click(function () {
-		rotateY += 15;
+		rotateY += 50;
 		myRotate();
 	});
 
@@ -43,13 +43,13 @@ $(document).ready(function () {
 	
 
 	$("#minusZ").click(function () {
-		rotateZ -= 15;
+		rotateZ -= 50;
 		myRotate();
 	});
 
 
 	$("#plusZ").click(function () {
-		rotateZ += 15;
+		rotateZ += 50;
 		myRotate();
 	});
 
@@ -57,13 +57,13 @@ $(document).ready(function () {
 	
 	
 	$("#minusTZ").click(function () {
-		translateZ -= 15;
+		translateZ -= 50;
 		myRotate();
 	});
 
 
 	$("#plusTZ").click(function () {
-		translateZ += 15;
+		translateZ += 50;
 		myRotate();
 	});
 	
@@ -82,7 +82,7 @@ $(document).ready(function () {
 	
 	$("#gminusY").click(function () {
 		
-		grotateY -= 15;
+		grotateY -= 50;
 		mygRotate();
 	});
 

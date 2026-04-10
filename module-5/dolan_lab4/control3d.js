@@ -68,7 +68,7 @@ $(document).ready(function () {
 	});
 	
 //////////////////////////////////////GROUND////////////////////////////////////
-		var grotateX = 0;
+	var grotateX = 0;
 	var grotateY = 0;
 	var grotateZ = 0;
 	var gtranslateZ = 0;
@@ -78,11 +78,49 @@ $(document).ready(function () {
 		$("#theGround").css("transform", "rotateX(" + grotateX + "deg) rotateY(" + grotateY + "deg) rotateZ(" + grotateZ + "deg) translateZ(" + gtranslateZ + "px)");
 	}
 	
-////y rotate////////////////////
-	
+
+	////x rotate////////////////////
+	$("#gminusX").click(function () {
+		
+		grotateX -= 15;
+		mygRotate();
+	});
+	$("#gplusX").click(function () {
+		
+		grotateX += 15;
+		mygRotate();
+	});
+	////y rotate////////////////////
 	$("#gminusY").click(function () {
 		
 		grotateY -= 15;
+		mygRotate();
+	});
+	$("#gplusY").click(function () {
+		
+		grotateY += 15;
+		mygRotate();
+	});
+	////z rotate////////////////////
+	$("#gminusZ").click(function () {
+		
+		grotateZ -= 15;
+		mygRotate();
+	});
+	$("#gplusZ").click(function () {
+		
+		grotateZ += 15;
+		mygRotate();
+	});
+	////z translate////////////////////
+	$("#gminusTZ").click(function () {
+		
+		gtranslateZ -= 15;
+		mygRotate();
+	});
+	$("#gplusTZ").click(function () {
+		
+		gtranslateZ += 15;
 		mygRotate();
 	});
 

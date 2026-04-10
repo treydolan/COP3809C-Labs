@@ -81,45 +81,37 @@ $(document).ready(function () {
 
 	////x rotate////////////////////
 	$("#gminusX").click(function () {
-		
 		grotateX -= 15;
 		mygRotate();
 	});
 	$("#gplusX").click(function () {
-		
 		grotateX += 15;
 		mygRotate();
 	});
 	////y rotate////////////////////
 	$("#gminusY").click(function () {
-		
 		grotateY -= 15;
 		mygRotate();
 	});
 	$("#gplusY").click(function () {
-		
 		grotateY += 15;
 		mygRotate();
 	});
 	////z rotate////////////////////
 	$("#gminusZ").click(function () {
-		
 		grotateZ -= 15;
 		mygRotate();
 	});
 	$("#gplusZ").click(function () {
-		
 		grotateZ += 15;
 		mygRotate();
 	});
 	////z translate////////////////////
 	$("#gminusTZ").click(function () {
-		
 		gtranslateZ -= 15;
 		mygRotate();
 	});
 	$("#gplusTZ").click(function () {
-		
 		gtranslateZ += 15;
 		mygRotate();
 	});

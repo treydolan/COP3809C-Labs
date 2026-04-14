@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
+}
+body {
+	background-color: #000;
+	font-family: 'Poiret One', cursive;
+}
+#container {
+	width: 100vw;
+	min-height: 100vh;
+	position: relative;
+}
+header {
+	background-color: #666;
+	color: #eee;
+	text-align: center;
+	height:80px;
+}
+header h1 {
+	padding: 5px;
+	font-size: 20px;
+}
+header h2 {
+	padding: 5px;
+	font-size: 17px;
+	color: #FFE189;
+}
+
+#parent_of_myhex {
+	perspective: 1800px;
+	perspective-origin: 50% -120px;
+	position: relative;
+	top:50px;
+/*	transform:scale(0.7);*/
+	z-index: 9999;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+#left_arrow, #right_arrow {
+	width: 50px;
+	height: 50px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 39%;
+	z-index: 100;
+	cursor: pointer;
+}
+
+
+#left_arrow {
+	background-image: url(../ui_images/left.png);
+	left: 2vw;
+}
+#right_arrow {
+	background-image: url(../ui_images/right.png);
+	right: 2vw;
+}
+
+#myhex {
+	position: relative;
+	margin: 0 auto;
+	width: 30vw;
+	height: 30vw;
+	transform-style: preserve-3d;
+	transition: all 1s;
+/*	 background-color: #F00;*/
+}
+.side {/*all 6 dives and 6 p's*/
+	/*we write code here!*/
+	
+	
+}
+div.side {
+	box-shadow: inset 10px -20px 60px rgba(0,0,0,0.80);
+}
+#myhex .first {
+
+	background-image: url(../hex_images/first.jpg);
+}
+#myhex .second {
+
+	background-image: url(../hex_images/second.jpg);
+}
+#myhex .third {
+
+	background-image: url(../hex_images/third.jpg);
+}
+#myhex .fourth {
+
+	background-image: url(../hex_images/fourth.jpg);
+}
+#myhex .fifth {
+
+	background-image: url(../hex_images/fifth.jpg);
+}
+#myhex .sixth {
+
+	background-image: url(../hex_images/sixth.jpg);
+}
+#myhex p {
+	font-size: 3vw;
+	color: #fff;
+	font-weight: 800;
+	text-shadow: 2px 2px 0px #000000;
+	padding: 1vw 3vw;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	text-align: center;
+}
+#myhex p a {
+	display: inline-block;
+	width: 7vw;
+	height: 7vw;
+	background-image: url(../ui_images/view.png);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+#myhex .firstText {
+
+}
+#myhex .secondText {
+	
+}
+#myhex .thirdText {
+	
+}
+#myhex .fourthText {
+
+}
+#myhex .fifthText {
+	
+}
+#myhex .sixthText {
+	
+}
+footer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100vw;
+	padding: 1vw;
+	
+}
+footer p {
+	font-size: 18px;
+text-align: center;
+	color: #ddd;
+	margin-bottom: 10px;
+}
+
+/*************************************************************************************************************************/
+@media only screen and (max-width : 800px) {
+#myhex p {
+	font-size: 5vw;
+	padding: 0;
+}
+header {
+	height: 40px;
+	padding:3px
+}
+header h1 {
+	font-size: 12px;
+	padding:2px
+}
+header h2 {
+	font-size: 10px;
+	padding:2px
+}
+	
+	#parent_of_myhex {
+	perspective: 1800px;
+	position: relative;
+	top:30px;
+/*	transform:scale(0.7);*/
+
+}
+#left_arrow, #right_arrow {
+	width: 40px;
+	height: 40px;/* top: 10px;*/
+
+}
+#myhex p a {
+	width: 16vw;
+	height: 16vw;
+}
+}

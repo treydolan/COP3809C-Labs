@@ -1,0 +1,73 @@
+@charset "UTF-8";
+* {/*resets*/
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	
+}
+
+body{
+	font-family:  "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+table, h1{
+		padding: 10px;
+	margin: 10px;
+}
+
+
+#container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+	background-image: url("images/grid.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+  perspective: 1000px;
+	/*perspective-origin: 50% 50%;*/
+}
+
+#myinterface{
+	position:relative;
+	z-index: 9999;
+}
+
+#theGround {
+  position: absolute;
+	 height: 600px;
+  width: 600px;
+	left:50%;
+	top:50%;
+	margin-left: -300px;
+	margin-top: -300px;
+	border: 1px solid black;
+  background-image: url("images/tough_grass.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+		transition: all 0.4s;
+transform-style: preserve-3d;
+	
+	/*transform: rotateX(60deg);*/
+}
+
+#inner{
+	
+	position: absolute;
+	 height: 350px;
+  width: 350px;
+	left:50%;
+	top:50%;
+	margin-left: -175px;
+	margin-top: -175px;
+	border: 1px solid black;
+  background-color:rgba(0,0,255,0.7);
+	  background-image: url("images/coin.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transition: all 0.4s;
+
+	color:white;
+	font-size: 20px;
+/*	transform-origin: top left;*/
+	 /*backface-visibility: hidden;*/
+}

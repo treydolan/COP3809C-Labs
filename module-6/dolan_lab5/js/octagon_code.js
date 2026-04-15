@@ -10,17 +10,17 @@ $(document).ready(function () {
 
 	///detect swipe
 
-	$('#parent_of_myhex').on("swipeleft", swipeLeftHandler);
+	$('#parent_of_myoct').on("swipeleft", swipeLeftHandler);
 
 	function swipeLeftHandler(event) {
-		Yrotate -= 60;
+		Yrotate -= 45;
 		doMove();
 	}
 
-	$('#parent_of_myhex').on("swiperight", swipeRightHandler);
+	$('#parent_of_myoct').on("swiperight", swipeRightHandler);
 
 	function swipeRightHandler(event) {
-		Yrotate += 60;
+		Yrotate += 45;
 		doMove();
 	}
 
@@ -29,7 +29,7 @@ $(document).ready(function () {
 
 	//the func to actually move	
 	function doMove() {
-		$('#myhex').css("transform", "rotateY(" + Yrotate + "deg) ");
+		$('#myoct').css("transform", "rotateY(" + Yrotate + "deg) ");
 	}
 
 	

@@ -34,7 +34,7 @@ header h2 {
 
 #parent_of_myoct {
 	perspective: 2000px;
-	perspective-origin: 50% 800px;
+	perspective-origin: 50% 700px;
 	position: relative;
 	top: 300px;
 	transform:scale(0.7);
@@ -201,10 +201,11 @@ header h2 {
 }
 	
 #parent_of_myoct {
-perspective: 1800px;
+perspective: 2000px;
+perspective-origin: 50% 500px;
 position: relative;
 top:300px;
-transform:scale(0.7);
+transform:scale(0.9);
 
 }
 #left_arrow, #right_arrow {

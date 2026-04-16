@@ -182,6 +182,17 @@ text-align: center;
 }
 
 /*************************************************************************************************************************/
+@media only screen and (min-width: 801px) and (max-width: 1400px) {
+	#parent_of_myoct {
+		perspective: 2000px;
+		perspective-origin: 50% 500px;
+		position: relative;
+		top:300px;
+		transform:scale(0.9);
+
+	}
+}
+
 @media only screen and (max-width : 800px) {
 #myoct p {
 	font-size: 5vw;
@@ -202,7 +213,7 @@ header h2 {
 	
 #parent_of_myoct {
 perspective: 2000px;
-perspective-origin: 50% 500px;
+perspective-origin: 50% 350px;
 position: relative;
 top:300px;
 transform:scale(0.9);

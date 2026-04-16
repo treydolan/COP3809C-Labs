@@ -1,10 +1,22 @@
 div {
 width: 60px;
 height: 60px;
-background-color: skyblue;
+background-color: grey;
 }
 
 .moved {
 transform: rotate3d(1, 1, 2, 45deg);
-background-color: pink;
+background-color: burlywood;
+
+animation: spin3d 3s linear infinite;
+}
+
+@keyframes spin3d {
+    0% {
+        transform: rotate3d(1,1,2,0deg);
+    }
+
+    100% {
+        transform: rotate3d(1,1,2,360deg);
+    }
 }

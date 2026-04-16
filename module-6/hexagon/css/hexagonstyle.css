@@ -32,12 +32,12 @@ header h2 {
 	color: #FFE189;
 }
 
-#parent_of_myoct {
-	perspective: 2000px;
-	perspective-origin: 50% 800px;
+#parent_of_myhex {
+	perspective: 1800px;
+	perspective-origin: 50% -120px;
 	position: relative;
-	top: 300px;
-	transform:scale(0.7);
+	top:50px;
+/*	transform:scale(0.7);*/
 	z-index: 9999;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -67,7 +67,7 @@ header h2 {
 	right: 2vw;
 }
 
-#myoct {
+#myhex {
 	position: relative;
 	margin: 0 auto;
 	width: 30vw;
@@ -77,49 +77,38 @@ header h2 {
 /*	 background-color: #F00;*/
 }
 .side {/*all 6 dives and 6 p's*/
-	position: absolute;
-	width: 30vw;
-	height: 30vw;
-	background-size: cover;
-	background-position: center;
 	/*we write code here!*/
+	
+	
 }
 div.side {
 	box-shadow: inset 10px -20px 60px rgba(0,0,0,0.80);
 }
-#myoct .first {
-	transform: rotateY(0deg) translateZ(36.21vw);
-	background-image: url(../oct_images/markus-spiske-cn0-hgcpoL8-unsplash.jpg);
+#myhex .first {
+
+	background-image: url(../hex_images/first.jpg);
 }
-#myoct .second {
-	transform: rotateY(45deg) translateZ(36.21vw);
-	background-image: url(../oct_images/henrik-donnestad-uG6R6Hl-L74-unsplash.jpg);
+#myhex .second {
+
+	background-image: url(../hex_images/second.jpg);
 }
-#myoct .third {
-	transform: rotateY(90deg) translateZ(36.21vw);
-	background-image: url(../oct_images/henrik-donnestad-Mc_Eh0mrh7c-unsplash.jpg);
+#myhex .third {
+
+	background-image: url(../hex_images/third.jpg);
 }
-#myoct .fourth {
-	transform: rotateY(135deg) translateZ(36.21vw);
-	background-image: url(../oct_images/henrik-donnestad-HO1Evlp1p1o-unsplash.jpg);
+#myhex .fourth {
+
+	background-image: url(../hex_images/fourth.jpg);
 }
-#myoct .fifth {
-	transform: rotateY(180deg) translateZ(36.21vw);
-	background-image: url(../oct_images/europeana-Agwv1mKDUnc-unsplash.jpg);
+#myhex .fifth {
+
+	background-image: url(../hex_images/fifth.jpg);
 }
-#myoct .sixth {
-	transform: rotateY(225deg) translateZ(36.21vw);
-	background-image: url(../oct_images/david-goulding-oanz-c6Bi5o-unsplash.jpg);
+#myhex .sixth {
+
+	background-image: url(../hex_images/sixth.jpg);
 }
-#myoct .seventh {
-	transform: rotateY(270deg) translateZ(36.21vw);
-	background-image: url(../oct_images/rick-rothenberg-KNDd8LcVHDY-unsplash.jpg);
-}
-#myoct .eighth {
-	transform: rotateY(315deg) translateZ(36.21vw);
-	background-image: url(../oct_images/the-new-york-public-library-a0h_2LjU5KQ-unsplash.jpg);
-}
-#myoct p {
+#myhex p {
 	font-size: 3vw;
 	color: #fff;
 	font-weight: 800;
@@ -133,7 +122,7 @@ div.side {
 	cursor: default;
 	text-align: center;
 }
-#myoct p a {
+#myhex p a {
 	display: inline-block;
 	width: 7vw;
 	height: 7vw;
@@ -142,29 +131,23 @@ div.side {
 	background-position: center center;
 	background-repeat: no-repeat;
 }
-#myoct .firstText  {
-	transform: rotateY(0deg) translateZ(36.21vw); 
+#myhex .firstText {
+
 }
-#myoct .secondText {
-	transform: rotateY(45deg) translateZ(36.21vw); 
+#myhex .secondText {
+	
 }
-#myoct .thirdText  {
-	transform: rotateY(90deg) translateZ(36.21vw); 
+#myhex .thirdText {
+	
 }
-#myoct .fourthText {
-	transform: rotateY(135deg) translateZ(36.21vw); 
+#myhex .fourthText {
+
 }
-#myoct .fifthText  {
-	transform: rotateY(180deg) translateZ(36.21vw); 
+#myhex .fifthText {
+	
 }
-#myoct .sixthText  {
-	transform: rotateY(225deg) translateZ(36.21vw); 
-}
-#myoct .seventhText{
-	transform: rotateY(270deg) translateZ(36.21vw); 
-}
-#myoct .eighthText {
-	transform: rotateY(315deg) translateZ(36.21vw); 
+#myhex .sixthText {
+	
 }
 footer {
 	position:fixed;
@@ -183,7 +166,7 @@ text-align: center;
 
 /*************************************************************************************************************************/
 @media only screen and (max-width : 800px) {
-#myoct p {
+#myhex p {
 	font-size: 5vw;
 	padding: 0;
 }
@@ -200,11 +183,11 @@ header h2 {
 	padding:2px
 }
 	
-#parent_of_myoct {
-perspective: 1800px;
-position: relative;
-top:300px;
-transform:scale(0.7);
+	#parent_of_myhex {
+	perspective: 1800px;
+	position: relative;
+	top:30px;
+/*	transform:scale(0.7);*/
 
 }
 #left_arrow, #right_arrow {
@@ -212,7 +195,7 @@ transform:scale(0.7);
 	height: 40px;/* top: 10px;*/
 
 }
-#myoct p a {
+#myhex p a {
 	width: 16vw;
 	height: 16vw;
 }

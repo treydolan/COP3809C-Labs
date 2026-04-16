@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hexagon</title>
+<link rel="stylesheet" type="text/css" href="css/hexagonstyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><!--needed for jquery mobile-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script><!-- jquery mobile-->
+<script type="text/javascript">$(document).bind("mobileinit", function(){$.extend(  $.mobile , {autoInitializePage: false})});</script>
+	<!--needed for jquery mobile-->
+
+<script src="js/hexagon_code.js"></script>
+
+<!--link to lightbox styles-->
+
+<link href="lightbox/src/css/lightbox.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="container">
+  <header>
+    <h1>3D CSS Interface</h1>
+    <h2>Swipe!</h2>
+  </header>
+  <div id="parent_of_myhex">
+    <div id="left_arrow"></div>
+    <div id="right_arrow"></div>
+    <div id="myhex" >
+		
+      <div class="side sixth"> </div>
+      <div class="side fifth"></div>
+      <div class="side fourth"> </div>
+      <div class="side third"></div>
+      <div class="side second"></div>
+      <div class="side first"></div>
+		
+      <p class="side sixthText">Art 6<br>
+        <a href="hex_images/sixth.jpg" data-lightbox="myart" data-title="sixth"></a></p>
+      <p class="side fifthText">Art 5<br>
+        <a href="hex_images/fifth.jpg" data-lightbox="myart" data-title="fifth"></a></p>
+      <p class="side fourthText">Art 4<br>
+        <a href="hex_images/fourth.jpg" data-lightbox="myart" data-title="fourth"></a></p>
+      <p class="side thirdText">Art 3<br>
+        <a href="hex_images/third.jpg" data-lightbox="myart" data-title="third"></a></p>
+      <p class="side secondText">Art 2<br>
+        <a href="hex_images/second.jpg" data-lightbox="myart" data-title="second"></a></p>
+      <p class="side firstText">Art 1<br>
+        <a href="hex_images/first.jpg" data-lightbox="myart" data-title="first"></a></p>
+		
+    </div>
+    <!--end myhex--> 
+  </div>
+  <!--end parent myhex-->
+  
+  <footer>
+    <p>This is an example of an interface, constructed entirely of HTML, CSS and Javascript. Navigate by swiping, arrows  or keyboard arrows.</p>
+  </footer>
+</div>
+<!--end container--> 
+<script src="lightbox/src/js/lightbox.js"></script> 
+<script>
+    lightbox.option({
+      'wrapAround': true,
+		'disableScrolling':true,
+		alwaysShowNavOnTouchDevices:true
+		
+    })
+</script>
+</body>
+</html>

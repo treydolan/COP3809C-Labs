@@ -3,7 +3,19 @@ $(document).ready(function () {
 	
 	//we add code for arrows and keyboard here!!!
 	
-	
+	var Yrotate = 0;
+
+	// LEFT ARROW CLICK
+	$('#left_arrow').click(function () {
+		Yrotate += 45;
+		doMove();
+	});
+
+	// RIGHT ARROW CLICK
+	$('#right_arrow').click(function () {
+		Yrotate -= 45;
+		doMove();
+	});
 	
 	
 	

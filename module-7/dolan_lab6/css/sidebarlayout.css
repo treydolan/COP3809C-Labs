@@ -1,10 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
-@import url(http://fonts.googleapis.com/css?family=Cinzel:400,700);
-@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 /*
 font-family: 'Cinzel', serif;
-font-family: 'Poiret One', cursive;
+font-family: 'Merriweather', cursive;
 */
 
 /*resets*/
@@ -18,7 +17,7 @@ font-family: 'Poiret One', cursive;
 	clear: both;
 }
 body {
-	font-family: 'Cinzel', serif;
+	font-family: 'Merriweather', serif;
 	background-color: #555;
 }
 #mega-wrapper {
@@ -31,7 +30,7 @@ body {
 /*moving parts********************************************************************************/
 #sidebar {
 
-	width: 300px;
+	width: 250px;
 	height: 100%;
 	position: fixed;
 	top: 0px;
@@ -40,11 +39,11 @@ body {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	z-index: 3;
-	perspective:400px;
-	transition: transform 0.5s ease-in-out;
+	perspective:600px;
+	transition: transform 1.5s ease-in-out;
 }
 .sb_hidden #sidebar {
-	transform: translate3d(-300px, 0, 0);
+	transform: translate3d(-250px, 0, 0);
 }
 .sb_showing #sidebar {
 transform: translate3d(0px, 0, 0);
@@ -59,13 +58,13 @@ transform: translate3d(0px, 0, 0);
 	background-color: #fff;
 	height: 100vh;
 	z-index: 4;
-transition: transform 0.5s ease-in-out;
+transition: transform 1.5s ease-in-out;
 }
 .sb_hidden #page {
 	transform: translate3d(0px, 0, 0);
 }
 .sb_showing #page {
-	transform: translate3d(300px, 0, 0) ;
+	transform: translate3d(250px, 0, 0) ;
 }
 /*the menu button itself*/
 #menu-trigger {
@@ -77,14 +76,14 @@ transition: transform 0.5s ease-in-out;
 	background-image: url(../sidebar_images/menu_iconS.png);
 	background-repeat: no-repeat;
 	z-index: 999;
-	transition: left 0.5s ease-in-out, transform 0.5s ease-in-out;
+	transition: left 1.5s ease-in-out, transform 1.5s ease-in-out;
 }
 .sb_hidden #menu-trigger {
 	left: 0px;
 	transform: rotate(0deg);
 }
 .sb_showing #menu-trigger {
-	left: 303px;
+	left: 253px;
 	transform: rotate(180deg);
 }
 /*NAV styles*/
@@ -94,7 +93,7 @@ transition: transform 0.5s ease-in-out;
 #mainnav {
 	min-height: 100%;
 transform-origin: 100% 50%;
-	transition: transform 0.5s ease-in-out;
+	transition: transform 1.5s ease-in-out;
 }
 .sb_hidden #mainnav {
 	transform: rotateY(-90deg);
@@ -142,7 +141,7 @@ transform-origin: 100% 50%;
 	background-image: none;
 	background-repeat: no-repeat;
 	background-position: 225px center;
-	transition: all 0.5s;
+	transition: all 1.5s;
 }
 #mainnav ul li a:hover {
 	color: rgba(255,255,255,1.00);
@@ -186,7 +185,7 @@ transform-origin: 100% 50%;
 	font-size: 35px;
 	letter-spacing: 4px;
 	text-shadow: 3px 3px 5px #000;
-	font-family: 'Poiret One', cursive;
+	font-family: 'Merriweather', cursive;
 }
 #container {
 max-width: 1100px;
@@ -196,7 +195,7 @@ max-width: 1100px;
 	padding-bottom: 50px;
 }
 #content h2 {
-	font-family: 'Poiret One', cursive;
+	font-family: 'Merriweather', cursive;
 	padding-top: 30px;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
@@ -238,7 +237,7 @@ footer h2 {
 	font-weight: 100;
 	color: #fff;
 	letter-spacing: 4px;
-	font-family: 'Poiret One', cursive;
+	font-family: 'Merriweather', cursive;
 	padding-bottom: 10px;
 	margin: 0 auto;
 	margin-bottom: 20px;

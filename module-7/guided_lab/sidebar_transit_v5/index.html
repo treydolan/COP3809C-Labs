@@ -6,12 +6,24 @@
 <title>Sidebar interface</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!--link to CDN hosted lib-->
 <script src="js/sidebar_functions.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/sidebarlayout.css">
-
+<link rel="stylesheet" type="text/css" href="css/sidebarlayout.css">
+<script>
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("p").toggleClass("red");
+		});
+	});
+</script>
+<style>
+	.red {
+		color: red !important;
+	}
+</style>
 
 </head>
 
 <body>
+
 <div id="mega-wrapper" class="sb_hidden">
 <div id="menu-trigger" ></div>
 	<div id="sidebar">
@@ -43,12 +55,14 @@
 		<!--the button to close and open-->
 		<header id="myheader">
 			<h1>A Brief History of Ancient Rome</h1>
+
 			<h2>Rome: Background</h2>
 		</header>
 		<div id="container">
 			<main id="content">
 				<h2>Some Background About Rome And Its History</h2>
 				<article class="article_1">
+				<button>Toggle class "red" for p elements</button>
 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. 
 <img class="article_img" src="sidebar_images/emperor1.jpg" alt="emperor">
  Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. Lorem ipsum dolor sit amet. consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>

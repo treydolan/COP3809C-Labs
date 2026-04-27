@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<xml>
+	<stockprices>
+		<node timepoint="1" price ="2.77"></node>
+		<node timepoint="2" price ="3.77"></node>
+		<node timepoint="3" price ="8.34"></node>
+		<node timepoint="4" price ="5.66"></node>
+		<node timepoint="5" price ="5.33"></node>
+		<node timepoint="6" price ="2.77"></node>
+		<node timepoint="7" price ="2.34"></node>
+		<node timepoint="8" price ="4.56"></node>
+		<node timepoint="9" price ="6.34"></node>
+		<node timepoint="10" price ="3.77"></node>
+	</stockprices>
+	</xml>
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sidebar interface</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!--link to CDN hosted lib-->
+<script src="js/sidebar_functions.js"></script>
+<link rel="stylesheet" type="text/css" href="css/sidebarlayout.css">
+<script>
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("p").toggleClass("red");
+		});
+	});
+</script>
+<style>
+	button {
+		font-size: larger;
+	}
+	.red {
+		color: red;
+	}
+</style>
+
+</head>
+
+<body>
+
+<div id="mega-wrapper" class="sb_hidden">
+<div id="menu-trigger" ></div>
+	<div id="sidebar">
+		<nav id="mainnav">
+			<div id="nav_title">
+				<h2>Table Of Contents</h2>
+			</div>
+			<!--end nav title-->
+			<ul>
+				<li><a href="#" class="myactive">Rome: Background</a></li>
+				<li><a href="#">Timeline</a></li>
+				<li><a href="#">The Early Republic</a></li>
+				<li><a href="#">The Civil Wars</a></li>
+				<li><a href="#">Roman Culture</a></li>
+				<li><a href="#">The First Emperors</a></li>
+				<li><a href="#">Rome At Its Peak</a></li>
+				<li><a href="#">Store</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<!--end nav--> 
+		
+	</div>
+	<!--end sidebar-->
+	
+	<div id="page">
+		
+		<!--the button to close and open-->
+		<header id="myheader">
+			<h1>A Brief History of Ancient Rome</h1>
+
+			<h2>Rome: Background</h2>
+		</header>
+		<div id="container">
+			<main id="content">
+				<h2>Some Background About Rome And Its History</h2>
+				<article class="article_1">
+				<button>Toggle class "red" for p elements</button>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. 
+<img class="article_img" src="sidebar_images/emperor1.jpg" alt="emperor">
+ Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. Lorem ipsum dolor sit amet. consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
+ 
+					<p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
+					<p>Quorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
+					<p>Rorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. </p>
+					
+										<p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
+					<p>Quorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
+					<p>Rorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. </p>
+					
+					
+					
+					<div class="myclear"></div>
+				</article>
+				<!--end article 1--> 
+				
+			</main>
+			<!--end  main content--> 
+			</div>
+		<!--end container--> 	
+			<footer>
+		<h2>A list of the Roman Emperors</h2>
+		<article>
+		Julius<br>
+Augustus<br>
+Tiberius<br>
+Caligula<br>
+Claudius<br>
+Nero<br>
+Galba<br>
+Otho<br>
+Vitellius<br>
+Vespasian<br>
+Titus<br>
+Domitian<br>
+Nerva<br>
+Trajan<br>
+Hadrian<br>
+Antoninus Pius
+		</article>
+		
+		</footer>
+	
+		
+	</div>
+	<!--end page-->
+	
+</div>
+<!--end mega-wrapper-->
+</body>
+</html>

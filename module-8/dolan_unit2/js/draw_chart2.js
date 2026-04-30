@@ -2,123 +2,132 @@
 $(document).ready(function () {
 	var myCanvas = $('#myCanvas');
 	var myPaper = myCanvas.get(0).getContext('2d');
-	
 	var container = $(myCanvas).parent();
 	var theMax = 0;
 	var theMin = 0;
 	var theAvg = 0;
+	var timer;
 
-	if ($(container).width() < 960) { //if small screen	
-		myCanvas.attr('width', $(container).width()); //set a new width
-		myCanvas.attr('height', $(container).width() / 2.4);
-	}
-
-	getMyData();
+	respondCanvas();
 
 	function getMyData() {
-
+		clearInterval(timer);
 		var children = document.getElementsByTagName('node');
-		//alert(children.length);
-		//alert(children[0].getAttribute('price'));
-		var nextX = 0;
-		var nextY = 0;
-		var canvasWidth = $("#myCanvas").width();
-		var canvasHeight = $("#myCanvas").height();
-		var widthPerNode = canvasWidth / (children.length-1)*0.95;
-		//alert(widthPerNode);
-		var priceArray = new Array();
-		var priceArraySum = 0;
-		var z = 0;
+		var canvasWidth = myCanvas.get(0).width;
+		var canvasHeight = myCanvas.get(0).height;
+		var chartPadding = 70;
+		var bottomPadding = 130;
+		var chartWidth = canvasWidth - (chartPadding * 2);
+		var chartHeight = canvasHeight - chartPadding - bottomPadding;
+		var widthPerNode = chartWidth / (children.length - 1);
+		var loadArray = [];
+		var loadArraySum = 0;
+		var i = 0;
 
-		for (z; z < children.length; z++) {
-			var getPrice = parseFloat(children[z].getAttribute('price'));
-			priceArray.push(getPrice);
-			priceArraySum += getPrice;
-
+		for (var z = 0; z < children.length; z++) {
+			var getLoadTime = parseFloat(children[z].getAttribute('loadtime'));
+			loadArray.push(getLoadTime);
+			loadArraySum += getLoadTime;
 		}
-		//alert(priceArraySum);
 
-		theMax = Math.max.apply(Math, priceArray);
-		//alert(theMax);
-		theMin = Math.min.apply(Math, priceArray);
-		//alert(theMin);
-		theAvg = (priceArraySum / children.length).toFixed(2);
-		$('#showMax').text("Max: "+theMax);
-		$('#showMin').text("Min: "+theMin);
-		$('#showAvg').text("Average: "+theAvg);
+		theMax = Math.max.apply(Math, loadArray);
+		theMin = Math.min.apply(Math, loadArray);
+		theAvg = (loadArraySum / children.length).toFixed(0);
+		$('#showMax').text('Slowest: ' + theMax + ' ms');
+		$('#showMin').text('Fastest: ' + theMin + ' ms');
+		$('#showAvg').text('Average: ' + theAvg + ' ms');
 
-				myPaper.strokeStyle="#F00";
-				myPaper.lineWidth="1";
+		myPaper.clearRect(0, 0, canvasWidth, canvasHeight);
+
+		myPaper.fillStyle = 'rgba(255, 255, 255, 0.72)';
+		myPaper.fillRect(0, 0, canvasWidth, canvasHeight);
+
+		myPaper.strokeStyle = 'rgba(0, 0, 0, 0.08)';
+		myPaper.lineWidth = 1;
+
+		for (var g = 0; g <= 5; g++) {
+			var gridY = chartPadding + (chartHeight / 5) * g;
+			myPaper.beginPath();
+			myPaper.moveTo(chartPadding, gridY);
+			myPaper.lineTo(canvasWidth - chartPadding, gridY);
+			myPaper.stroke();
+		}
+
+		myPaper.strokeStyle = '#111';
+		myPaper.lineWidth = 1;
 		myPaper.beginPath();
-myPaper.moveTo(-2,canvasHeight);
-		
-		
-		setInterval(function () {
-			drawOneNode()
+		myPaper.moveTo(chartPadding, chartPadding);
+		myPaper.lineTo(chartPadding, canvasHeight - bottomPadding);
+		myPaper.lineTo(canvasWidth - chartPadding, canvasHeight - bottomPadding);
+		myPaper.stroke();
+
+		myPaper.fillStyle = '#111';
+		myPaper.font = '14px Inter, Arial, sans-serif';
+		myPaper.fillText('Load Time (ms)', chartPadding, 35);
+		myPaper.fillText('Development Optimization', canvasWidth / 2 - 100, canvasHeight - 25);
+
+		myPaper.strokeStyle = '#00bcd4';
+		myPaper.lineWidth = 4;
+		myPaper.beginPath();
+
+		timer = setInterval(function () {
+			drawOneNode();
 		}, 200);
 
-		var i = 0;
-		
-		
-		
-		
-		
 		function drawOneNode() {
-
-			
-			
 			if (i < children.length) {
-				//myPaper.clearRect(0, 0, myCanvas.width, myCanvas.height); //clear the canvas
-				nextX =( i * widthPerNode)-2;
-				nextY = canvasHeight - children[i].getAttribute('price') * (canvasHeight / theMax)*0.9;//scale
+				var nextX = chartPadding + (i * widthPerNode);
+				var loadTime = parseFloat(children[i].getAttribute('loadtime'));
+				var nextY = (canvasHeight - bottomPadding) - (loadTime * (chartHeight / theMax));
 
-					
-				myPaper.lineTo(nextX,nextY);
+				if (i === 0) {
+					myPaper.moveTo(nextX, nextY);
+				} else {
+					myPaper.lineTo(nextX, nextY);
+					myPaper.stroke();
+				}
+				myPaper.save();
+				myPaper.beginPath();
+				myPaper.arc(nextX, nextY, 5, 0, Math.PI * 2);
+				myPaper.fillStyle = '#00bcd4';
+				myPaper.fill();
+				myPaper.restore();
 				
-		myPaper.stroke();
-				
+				myPaper.beginPath();
+				myPaper.moveTo(nextX, nextY);
 
-			//	myPaper.fillRect(nextX, nextY, widthPerNode - 4, canvasHeight - nextY);
-				
-				myPaper.fillStyle = "rgba(0, 0, 0, 0.6)";
-				myPaper.font = "1.2vw Arial";
-				
-		myPaper.fillText(children[i].getAttribute('price'), nextX+5,nextY+20 );
-	myPaper.fillText(children[i].getAttribute('timepoint'), nextX+5 ,  canvasHeight-10);
+				myPaper.fillStyle = '#111';
+				myPaper.font = '11px Inter, Arial, sans-serif';
+				myPaper.fillText(loadTime + ' ms', nextX - 24, nextY - 12);
+				var label = children[i].getAttribute('optimization');
 
-				
-			
-				
+				myPaper.save();
+				myPaper.translate(nextX, canvasHeight - 60);
+				myPaper.rotate(-Math.PI / 4); // 45° rotation
+				myPaper.fillText(label, 0, 0);
+				myPaper.restore();
+
 				i++;
-			} //end of if not last node
-			
-		
-		} //end of the func timer
-		
+			} else {
+				clearInterval(timer);
+			}
+		}
+	}
 
-		
-	} //end getMy data
-
-	
 	var doit;
 	$(window).resize(function () {
-		clearTimeout(doit); //clear prev values
+		clearTimeout(doit);
 		doit = setTimeout(respondCanvas, 600);
 	});
 
 	function respondCanvas() {
-		if ($(container).width() < 960) { //if small screen
-
-			myCanvas.attr('width', $(container).width()); //set a new width
-			myCanvas.attr('height', $(container).width() / 2.4);
-			myPaper.clearRect(0, 0, myCanvas.width, myCanvas.height); //clear the canvas
-			getMyData(); //redraw the blocks
+		if ($(container).width() < 1000) {
+			myCanvas.attr('width', $(container).width());
+			myCanvas.attr('height', $(container).width() / 1.67);
 		} else {
-
-			myCanvas.attr('width', 960);
-			myCanvas.attr('height', 400);
-			myPaper.clearRect(0, 0, myCanvas.width, myCanvas.height);
-			getMyData();
-		} //end if-else
-	} //end func respond canvas
-}); //end doc ready
+			myCanvas.attr('width', 1000);
+			myCanvas.attr('height', 600);
+		}
+		getMyData();
+	}
+});

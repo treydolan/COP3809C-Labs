@@ -1,136 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width,initial-scale=1">
-	<xml>
-	<stockprices>
-		<node timepoint="1" price ="2.77"></node>
-		<node timepoint="2" price ="3.77"></node>
-		<node timepoint="3" price ="8.34"></node>
-		<node timepoint="4" price ="5.66"></node>
-		<node timepoint="5" price ="5.33"></node>
-		<node timepoint="6" price ="2.77"></node>
-		<node timepoint="7" price ="2.34"></node>
-		<node timepoint="8" price ="4.56"></node>
-		<node timepoint="9" price ="6.34"></node>
-		<node timepoint="10" price ="3.77"></node>
-	</stockprices>
-	</xml>
 <head>
-
-<title>Sidebar interface</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!--link to CDN hosted lib-->
-<script src="js/sidebar_functions.js"></script>
-<link rel="stylesheet" type="text/css" href="css/sidebarlayout.css">
-<script>
-	$(document).ready(function() {
-		$("button").click(function() {
-			$("p").toggleClass("red");
-		});
-	});
-</script>
-<style>
-	button {
-		font-size: larger;
-	}
-	.red {
-		color: red;
-	}
-</style>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Website Performance Optimization</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/sidebar_functions.js"></script>
+	<script src="js/draw_chart2.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/sidebarlayout.css">
+	<link rel="stylesheet" type="text/css" href="css/chart.css">
 </head>
-
 <body>
+	<xml>
+		<dataset>
+			<node optimization="Baseline" loadtime="1450"></node>
+			<node optimization="Image Compression" loadtime="1180"></node>
+			<node optimization="Minified CSS" loadtime="970"></node>
+			<node optimization="Minified JS" loadtime="820"></node>
+			<node optimization="Browser Caching" loadtime="690"></node>
+			<node optimization="Font Optimization" loadtime="560"></node>
+			<node optimization="Lazy Loading" loadtime="430"></node>
+			<node optimization="CDN Enabled" loadtime="340"></node>
+		</dataset>
+	</xml>
+	<div id="mega-wrapper" class="sb_hidden">
+		<div id="menu-trigger"></div>
+		<div id="sidebar">
+			<nav id="mainnav">
+				<div id="nav_title">
+					<img src="sidebar_images/speed_46dp_00BCD4_FILL0_wght400_GRAD0_opsz48.svg" alt="Performance Icon">
+					<h2>Menu</h2>
+				</div>
+				<ul>
+					<li><a href="#" class="myactive">Services</a></li>
+					<li><a href="#chart-section">Load Time Chart</a></li>
+					<li><a href="#">Image Optimization</a></li>
+					<li><a href="#">Code Minification</a></li>
+					<li><a href="#">Caching Strategy</a></li>
+					<li><a href="#">Testing Tools</a></li>
+					<li><a href="#">Best Practices</a></li>
+				</ul>
+			</nav>
+		</div>
 
-<div id="mega-wrapper" class="sb_hidden">
-<div id="menu-trigger" ></div>
-	<div id="sidebar">
-		<nav id="mainnav">
-			<div id="nav_title">
-				<h2>Table Of Contents</h2>
-			</div>
-			<!--end nav title-->
-			<ul>
-				<li><a href="#" class="myactive">Rome: Background</a></li>
-				<li><a href="#">Timeline</a></li>
-				<li><a href="#">The Early Republic</a></li>
-				<li><a href="#">The Civil Wars</a></li>
-				<li><a href="#">Roman Culture</a></li>
-				<li><a href="#">The First Emperors</a></li>
-				<li><a href="#">Rome At Its Peak</a></li>
-				<li><a href="#">Store</a></li>
-				<li><a href="#">Help</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-		<!--end nav--> 
-		
-	</div>
-	<!--end sidebar-->
-	
-	<div id="page">
-		
-		<!--the button to close and open-->
-		<header id="myheader">
-			<h1>A Brief History of Ancient Rome</h1>
+		<div id="page">
+			<header id="myheader">
+					<h1>Website Performance Optimization</h1>
+					<h2>Tracking Faster Load Times Across Front-End Optimizations</h2>
+			</header>
 
-			<h2>Rome: Background</h2>
-		</header>
-		<div id="container">
-			<main id="content">
-				<h2>Some Background About Rome And Its History</h2>
-				<article class="article_1">
-				<button>Toggle class "red" for p elements</button>
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. 
-<img class="article_img" src="sidebar_images/emperor1.jpg" alt="emperor">
- Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. Lorem ipsum dolor sit amet. consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
- 
-					<p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
-					<p>Quorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
-					<p>Rorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. </p>
+			<div id="container">
+				<main id="content">
+					<section id="chart-section" class="chart-area">
+						<div class="chart-title">
+							<h2>Website Load Time by Optimization</h2>
+						<p>Each optimization below was applied to our test website. The chart shows how each improvement reduced the average page load time (in milliseconds). Lower numbers mean faster performance</p>
+						</div>
+						<canvas id="myCanvas" width="1000" height="600">Your browser does not support canvas.</canvas>
+						<div id="stats">
+							<div id="showMax">Slowest:</div>
+							<div id="showMin">Fastest:</div>
+							<div id="showAvg">Average:</div>
+						</div>
+					</section>
+					<h2><span>Improving Speed Through Better Front-End Decisions</span></h2>
+					<article class="article_1">
+						<h3>Why Performance Matters</h3>
+						<p><img class="article_img" src="sidebar_images/olumuyiwa-sobowale-kQIdjLbCghA-unsplash.jpg" alt="Developer performing web optimization">Website performance is an important part of modern front-end development because users expect pages to load quickly on desktops, tablets, and phones. A slow site can feel broken even when the design looks good. Developers improve performance by compressing images, reducing unnecessary code, limiting large files, and testing how quickly the browser can display usable content.</p>
+						<h3>Continuous Improvement</h3>
+						<p><img class="article_img" src="sidebar_images/growtika-ItGgnEXi48c-unsplash.jpg" alt="web performance dashboard illustration">Performance optimization usually happens in stages instead of all at once. Each stage of optimization can make a site faster as the developer removes unused CSS, minifies JavaScript, improves responsive images, and uses browser caching more effectively. The chart below shows a fictional project where load time decreases as improvements are made across eight development optimizations.</p>
+						<div class="myclear"></div>
+					</article>
+
 					
-										<p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
-					<p>Quorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis.</p>
-					<p>Rorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus lacus non risus molestie, fringilla aliquet ante euismod. Sed eget purus lacus. Aenean tempus vitae augue vel dapibus. Pellentesque pellentesque tincidunt dignissim. Praesent vehicula est turpis. </p>
-					
-					
-					
-					<div class="myclear"></div>
-				</article>
-				<!--end article 1--> 
-				
-			</main>
-			<!--end  main content--> 
+				</main>
 			</div>
-		<!--end container--> 	
+
 			<footer>
-		<h2>A list of the Roman Emperors</h2>
-		<article>
-		Julius<br>
-Augustus<br>
-Tiberius<br>
-Caligula<br>
-Claudius<br>
-Nero<br>
-Galba<br>
-Otho<br>
-Vitellius<br>
-Vespasian<br>
-Titus<br>
-Domitian<br>
-Nerva<br>
-Trajan<br>
-Hadrian<br>
-Antoninus Pius
-		</article>
-		
-		</footer>
-	
-		
+				<h2>Common Performance Improvements</h2>
+				<article>
+					Compress Images<br>
+					Minify CSS<br>
+					Minify JavaScript<br>
+					Remove Unused Code<br>
+					Use Browser Caching<br>
+					Optimize Fonts<br>
+					Lazy Load Media<br>
+					Reduce HTTP Requests<br>
+					Test Mobile Speed<br>
+					Review Core Web Vitals
+				</article>
+			</footer>
+		</div>
 	</div>
-	<!--end page-->
-	
-</div>
-<!--end mega-wrapper-->
 </body>
 </html>

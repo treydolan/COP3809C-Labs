@@ -1,0 +1,27 @@
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+div.fixed {
+  position: fixed;
+  border: 3px solid red;
+}
+div.absolute {
+  position: absolute;
+  border: 3px solid purple;
+}
+div.relative {
+  position: relative;
+  border: 3px solid blue;
+}
+div.sticky {
+  position: sticky;
+  top: 10px;
+  border: 3px solid orange;
+}
+
+
+div {
+    padding: 20px;
+    margin: 20px;
+}

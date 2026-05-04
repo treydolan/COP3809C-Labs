@@ -1,0 +1,26 @@
+#div1 {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin-left: 60px;
+  border: 1px solid blue;
+  perspective: 67px;
+}
+
+#div2, #div4 {
+  padding: 50px;
+  position: absolute;
+  border: 1px solid black;
+  background: rgba(100,100,100,0.5); 
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+}
+
+#div3 {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin-left: 60px;
+  border: 1px solid blue;
+  perspective: none;
+}

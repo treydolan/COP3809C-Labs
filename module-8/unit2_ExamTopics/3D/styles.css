@@ -1,0 +1,37 @@
+div {
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+#myDiv {
+  transform: rotateX(150deg);
+}
+
+#div1 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 100px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#div2 {
+  padding: 50px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: red;
+  transform: rotateY(60deg);
+  transform-style: preserve-3d;
+}
+
+#div3 {
+  padding: 40px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: yellow;
+  transform: rotateY(-60deg);
+
+}

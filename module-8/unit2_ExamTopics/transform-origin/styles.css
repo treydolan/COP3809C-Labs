@@ -1,0 +1,31 @@
+#div1 {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    padding: 10px;
+    border: 1px solid black;
+
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+#div2 {
+    padding: 50px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: red;
+
+    transform-origin: 20% 40%;
+    animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(0);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) translate(500px);
+    }
+}
